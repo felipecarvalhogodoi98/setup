@@ -1,14 +1,12 @@
 {
   // Workbench
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Dracula",
   "workbench.editor.labelFormat": "short",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.editor.untitled.hint": "hidden",
 
   // Editor settings
   "editor.wordWrap": "on",
-  "editor.fontSize": 14,
+  "editor.fontSize": 13.5,
   "editor.letterSpacing": 1,
   "editor.lineHeight": 20,
   "editor.fontWeight": "300",
@@ -22,7 +20,7 @@
   "editor.semanticHighlighting.enabled": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
 
    // VSCode stuff
@@ -75,31 +73,41 @@
   "git.confirmSync": false,
   "editor.inlineSuggest.enabled": true,
 
-  // "[typescriptreact]": {
-  //   "editor.codeActionsOnSave": {
-  //     "source.fixAll.eslint": true
-  //   },
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  //   "editor.formatOnSave": true
-  // },
-  // "[json]": {
-  //   "editor.defaultFormatter": "vscode.json-language-features",
-  //   "editor.formatOnSave": true
-  // },
-  "[typescript]": {
+  "[typescriptreact]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+      "source.fixAll.eslint": "explicit"
     },
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "[javascript]": {
+  "[javascriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave":true
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+     // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": false
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -109,9 +117,12 @@
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnType": true,
-    "editor.formatOnSave": true
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnType": true,
   },
   
   "material-icon-theme.folders.theme": "specific",
@@ -122,17 +133,23 @@
     "--style",
     "{based_on_style: chromium, indent_width: 2}"
   ],
-  "glassit.alpha": 245,
+  "glassit.alpha": 240,
   "terminal.integrated.env.linux": {},
   "console-ninja.toolsToEnableSupportAutomaticallyFor": {
     "live-server": true,
     "live-preview": true
   },
-  "gitlens.gitCommands.skipConfirmations": [
-    "fetch:command",
-    "stash-push:command",
-    "switch:command",
-    "stash-apply:command"
-  ],
+  "terminal.integrated.env.windows": {},
   "workbench.editor.empty.hint": "hidden",
-}	
+  "remote.autoForwardPortsSource": "hybrid",
+
+
+  // C++ runner
+  "C_Cpp_Runner.compilerArgs": [
+    "pthread"
+  ],
+  "workbench.colorTheme": "Omni",
+  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.env.osx": {},
+  "github.copilot.nextEditSuggestions.enabled": true,
+}
